@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>My First Vue App</title>
+</head>
+<body>
+	
+	<div class="my-div">
+
+		<table>
+			<tr>
+				<th>First Name</th>
+				<td><input type="text" v-model="firstName"></td>
+			</tr>
+			<tr>
+				<th>Last Name</th>
+				<td><input type="text" v-model="lastName"></td>
+			</tr>
+			<tr>
+				<th>Full Name</th>
+				<td><input type="text" v-model="fullName"></td>
+			</tr>
+			<tr>
+				<th></th>
+				<td><input type="submit" @click="makeFullName" value="Submit"></td>
+			</tr>
+		</table>
+		<hr>
+		<table>
+			<tr>
+				<th>First Number: </th>
+				<td><input type="text" v-model="firstNum"></td>
+			</tr>
+			<tr>
+				<th>Second Number: </th>
+				<td><input type="text" v-model="secondNum"></td>
+			</tr>
+			<tr>
+				<th>Result: </th>
+				<td><input type="text" v-model="result"></td>
+			</tr>
+			<tr>
+				<th></th>
+				<td>
+					<input type="submit" @click="add" value="+">
+					<input type="submit" @click="sub" value="-">
+					<input type="submit" @click="mul" value="*">
+					<input type="submit" @click="div" value="/">
+					<input type="submit" @click="rem" value="%">
+				</td>
+			</tr>
+		</table>
+		<hr>
+		<ul>
+			<li v-for="course in courses">
+				<strong>{{course.title}}</strong> - by <em>{{course.inventor}}</em> 
+			</li>
+		</ul>
+
+
+
+
+
+
+
+<!-- 		<h1>Hello World</h1>
+		<div>
+		{{message}}	
+		</div>
+		<div>
+		{{message}}	
+		</div>
+		<h1>Votes: {{votes}}</h1>
+		<button type="button" @click="votes++">+</button>
+		<button type="button" v-on:click="votes--">-</button>
+		<h1>{{name}}</h1>
+		<input type="text" v-model="name"> -->
+	</div>
+
+	<script src="vue.js" ></script>
+	<script src="script.js" ></script>
+</body>
+</html>
